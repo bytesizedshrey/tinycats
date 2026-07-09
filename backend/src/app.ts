@@ -1,6 +1,9 @@
 import express,{type Request, type Response} from 'express'
+import catsRoute from './routes/cat.routes.ts'
 
 const app = express()
+
+app.use(express.json())
 
 app.get('/',(req: Request, res : Response)=>{
     res.send({
@@ -8,5 +11,7 @@ app.get('/',(req: Request, res : Response)=>{
         message : 'Tiny cats backend running.'
     })
 })
+
+app.use("/api/cats",catsRoute)
 
 export default app;
