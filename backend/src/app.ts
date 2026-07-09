@@ -1,7 +1,7 @@
 import express,{type Request, type Response} from 'express'
 import catsRoute from './routes/cat.routes.ts'
 import aiRoute from './routes/ai.routes.ts'
-import aiRecommendRoutes from './routes/aiRecommend.route.ts'
+import aiRecommendRoutes from './routes/aiRecommend.routes.ts'
 
 const app = express()
 
