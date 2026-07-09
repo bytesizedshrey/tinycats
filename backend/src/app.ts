@@ -1,5 +1,6 @@
 import express,{type Request, type Response} from 'express'
 import catsRoute from './routes/cat.routes.ts'
+import aiRoute from './routes/ai.routes.ts'
 
 const app = express()
 
@@ -13,5 +14,6 @@ app.get('/',(req: Request, res : Response)=>{
 })
 
 app.use("/api/cats",catsRoute)
+app.use("/api/ai",aiRoute)
 
 export default app;
