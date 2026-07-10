@@ -32,3 +32,5 @@ server.registerTool(
     }
   },
 );
+
+console.log('tiny cats mcp running...') 
