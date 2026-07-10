@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "nodemon --exec tsx src/server.ts"
+    "dev": "nodemon --exec tsx src/server.ts",
+    "seed": "tsx src/seed.ts"
   },
   "keywords": [],
   "author": "",
