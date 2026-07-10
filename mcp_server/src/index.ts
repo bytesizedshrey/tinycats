@@ -10,7 +10,9 @@ const server = new McpServer({
 });
 
 server.registerTool(
+    //path
   "recommend_cats",
+  //middleware
   {
     title: "recommend_cats",
     description: "recommend best cat breed according to inputs",
@@ -19,6 +21,7 @@ server.registerTool(
       apartmentFriendly: z.boolean(),
     },
   },
+  //callback
   async ({kidsFriendly,apartmentFriendly}) => {
     const result = await recommendCatsTool(kidsFriendly,apartmentFriendly);
 
@@ -33,4 +36,8 @@ server.registerTool(
   },
 );
 
-console.log('tiny cats mcp running...') 
+const transporter = new StdioServerTransport()
+
+await server.connect(transporter)
+
+console.error('tiny cats mcp running...') 
